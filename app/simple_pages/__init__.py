@@ -25,3 +25,10 @@ def welcome():
         return render_template('welcome.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/OOPs')
+def OOPs():
+    try:
+        return render_template('OOPs.html')
+    except TemplateNotFound:
+        abort(404)
