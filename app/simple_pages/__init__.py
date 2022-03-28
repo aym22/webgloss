@@ -26,6 +26,13 @@ def welcome():
     except TemplateNotFound:
         abort(404)
 
+@simple_pages.route('/AAA Testing')
+def AAA Testing():
+    try:
+        return render_template('AAA Testing.html')
+    except TemplateNotFound:
+        abort(404)
+
 @simple_pages.route('/OOPs')
 def OOPs():
     try:
