@@ -17,7 +17,26 @@
     <p>Let’s look at how to apply the Arrange-Act-Assert pattern in Python code. I’ll use pytest for demonstration.</p>
     <h2>Unit Testing</h2>
     <p>Here’s a basic unit test for Python’s absolute value function:</p>
-    <img src="../../static/images/absv.png" alt="Codes" width="300" height="300">
+    <img src="../../static/images/absv.png" alt="Codes" width="300" height="450">
     <p>This test may seem trivial, but we can use it to illustrate our pattern. I like to write comments denoting each phase of the test case as well.</p>
+     <ol>
+         <li>The <i>Arrange</i> step creates a variable named “negative” for testing.</li>
+         <li>The <i>Act</i> step calls the “abs” function using the “negative” variable and stores the returned value in a variable named “answer.”</li>
+         <li>The <i>Assert</i> step verifies that “answer” is a positive value.</li>
+     </ol>
+    <h2><strong>Feature Testing</strong></h2>
+    <p>Let’s kick it up a notch with a more complicated test. This next example tests the DuckDuckGo Instant Answer API using the requests package:</p>
+    <img src="../../static/images/code2.png" alt="Codes" width="300" height="450">
+    <p>We can clearly see that the <i>Arrange-Act-Assert</i> pattern works for feature tests as well as unit tests.</p>
+    <ol>
+         <li>The <i>Arrange</i> step forms the endpoint URL for searching for “Python Programming.” Notice the base URL and the query parameters.</li>
+         <li>The <i>Act</i> steps call the API using the URL using “requests” and then parse the response’s body from JSON into a Python dictionary.</li>
+         <li>The <i>Assert</i> steps then verify that the HTTP status code was 200, meaning “OK” or “success,” and that the word “Python” appears somewhere in the response’s abstract text.</li>
+     </ol>
+
+    <p>Arrange-Act-Assert also works for other types of feature tests, like Web UI and mobile tests.</p>
+    <h2><strong>More Advice</strong></h2>
+    <p><i>Arrange-Act-Assert</i> is powerful because it is simple. It forces tests to focus on independent, individual behaviors. It separates setup actions from the main actions. It requires test to make verifications and not merely run through motions. Notice how the pattern is not <i>Arrange-Act-Assert-Act-Assert</i> – subsequent actions and assertions belong in separate tests! <i>Arrange-Act-Assert</i> is a great pattern to follow for writing good functional tests.</p>
+
 {% endblock %}
 </article>
