@@ -21,12 +21,25 @@
     <p>No, this fails the OCP principle. OCP forbids it. If we want to give a new percent discount maybe, to a different type of customers, you will see that a new logic will be added. To make it follow the OCP principle, we will add a new class that will extend the Discount. In this new class, we would implement its new behavior:</p>
     <img src="../../static/images/SOLIDs4.png" alt="Codes4" width="350" height="550">
     <p>If you decide 80% discount to super VIP customers, it should be like this:</p>
-    <h2 style="color:red;">Extension without modification.</h2>
-    <p></p>
-    <p></p>
-    <p></p>
-
-
+    <h2 style="color:grey;">Extension without modification.</h2>
+    <img src="../../static/images/SOLIDs5.png" alt="Codes5" width="350" height="550">
+    <h2><strong>3.Liskov Substitution Principle</strong></h2>
+    <p>The main idea behind Liskov Subtitution Principle is that, for any class, a client should be able to use any of its subtypes indistinguishably, without even noticing, and therefore without compromising the expected behavior at runtime. This means that clients are completely isolated and unaware of changes in the class hierarchy.</p>
+    <p><i>More formally:
+Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.</i></p>
+    <p>In simpler terms means that a subclass, child or specialization of an object or class must be suitable by its Parent or SuperClass.</p>
+    <img src="../../static/images/SOLIDS6.png" alt="Codes6" width="350" height="550">
+    <p>Remarks on the LSP The LSP is fundamental to a good object-oriented software design because it emphasizes one of its core traits — polymorphism. It is about creating correct hierarchies so that classes derived from a base one are polymorphic along the parent one, with respect to the methods on their interface. It is also interesting to notice how this principle relates to the previous one — if we attempt to extend a class with a new one that is incompatible, it will fail, the contract with the client will be broken, and as a result such an extension will not be possible (or, to make it possible, we would have to break the other end of the principle and modify code in the client that should be closed for modification, which is completely undesirable and unacceptable).</p>
+    <p>Carefully thinking about new classes in the way that LSP suggests helps us to extend the hierarchy correctly. We could then say that LSP contributes to the OCP.</p>
+    <h2><strong>4.Interface Segregation Principle</strong></h2>
+    <p>Make fine grained interfaces that are client specific Clients should not be forced to depend upon interfaces that they do not use. This principle deals with the disadvantages of implementing big interfaces.</p>
+    <p>To illustrate this completely, we will go with a classic example because it is highly significant and easily understandable. The Classic Example</p>
+    <img src="../../static/images/SOLIDS7.png" alt="Codes7" width="350" height="550">
+    <p>Another nice trick is that in our business logic, a single class can implement several interfaces if needed. So we can provide a single implementation for all the common methods between the interfaces. The segregated interfaces will also force us to think of our code more from the client’s point of view, which will in turn lead to loose coupling and easy testing. So, not only have we made our code better to our clients, we also made it easier for ourselves to understand, test and implement.</p>
+    <h2><strong>5.Dependecy Inversion Principle</strong></h2>
+    <p>Dependency should be on abstractions not concretions. High-level modules should not depend upon low-level modules. Both low and high level classes should depend on the same abstractions. Abstractions should not depend on details. Details should depend upon abstractions.</p>
+    <p>There comes a point in software development where our app will be largely composed of modules. When this happens, we have to clear things up by using dependency injection. High-level components depending on low-level components to function. To create specific behavior you can use techniques like inheritance or interfaces.</p>
+    <img src="../../static/images/SOLIDS8.png" alt="Codes7" width="350" height="550">
 
 {% endblock %}
 </article>
