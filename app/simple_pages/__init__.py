@@ -26,10 +26,10 @@ def welcome():
     except TemplateNotFound:
         abort(404)
 
-@simple_pages.route('/AAA Testing')
-def AAA Testing():
+@simple_pages.route('/AAA_Testing')
+def AAA_Testing():
     try:
-        return render_template('AAA Testing.html')
+        return render_template('AAA_Testing.html')
     except TemplateNotFound:
         abort(404)
 
