@@ -9,9 +9,9 @@
     <p><strong>Object:</strong> An instance of a class that is created at runtime. In C#, an instance is created with the new keyword.</p>
     <p><strong>Object Variable: </strong> The variable used when creating an object. For example, var myCustomer = new Customer(); In this example, myCustomer is the object variable. Use the object variable to set the properties and call the methods. The object variable retains the state of the object.
     <p><strong>Method signature:</strong>The code defining the method function including the function name and the set of parameters. The signature does not include the return type. Every function signature within a class must be unique. The signature is used to “match up” calls to the function.</p>
-    <p><strong>Overloading:</strong>Methods that have the same name but different parameters. Example: public bool Retrieve() and public bool Retrieve(int id). The Retrieve method in this example is said to have “two overloads”.</p>
+    <p><strong>Overloading:</strong> Methods that have the same name but different parameters. Example: public bool Retrieve() and public bool Retrieve(int id). The Retrieve method in this example is said to have “two overloads”.</p>
     <p><strong>Contract: </strong>The set of public properties and methods in a class define the classes contract. The class makes a promise that it will provide the defined properties and methods to any other code that needs them. This is also known as the <strong>“class interface“.</strong></p>
-    <p><strong>Constructor:</strong>Code that is executed each time an instance of the class is created.</p>
+    <p><strong>Constructor:</strong> Code that is executed each time an instance of the class is created.</p>
     <p><strong>Default Constructor:</strong> A constructor with no parameters.</p>
     <p><strong>Overriding: </strong> When using inheritance (see below), a child class can override a member of the parent class to provide its own implementation.</p>
     <p><strong>Interface:</strong> An explicit interface is a separate type (INotifyPropertyChanged for example) that defines a set of properties and methods with no implementation. Any class can then implement an interface to use the set of properties and methods provided in the interface. Think of an interface as a role that an object can play. For example, an ILoggable interface defines a logging role. An IEmail interface defines an emailing role. An Order class may implement both the ILoggable and IEmail interface to take on both roles. An Address class may implement only the ILoggable interface.</p>
@@ -20,14 +20,23 @@
     <p><strong>Abstraction: </strong> The process of defining classes by simplifying reality, ignoring extraneous details, and focusing on what is important for a purpose. For example, a customer may have a name, title, address, marital status, pets, children, credit card information, vehicles, etc. But if the purpose of the application is to process orders, the application may only care about the customer’s name, address, and credit card information.</p>
     <p><strong>Encapsulation:</strong>A way to hide (or encapsulate) the data and implementation details within a class, thus hiding complexity. In C#, data elements are defined with private backing fields and exposed through property getters and setters. So the data is encapsulated.</p>
     <p><strong>Inheritance:</strong> A relationship between classes whereby child (or derived) classes inherit all of the members of the parent (or base) class. For example, an application may define a “business object base” class that all business objects inherit from. This base class can contain members common to all child classes, such as entity state information.</p>
-    <p><strong>Polymorphism:</strong>Basically “many forms”. The concept that a single method can behave differently depending on the type of object that calls it. For example, the Validate method in Customer class performs differently from the Validate method in the Order class.</p>
+    <p><strong>Polymorphism:</strong> Basically “many forms”. The concept that a single method can behave differently depending on the type of object that calls it. For example, the Validate method in Customer class performs differently from the Validate method in the Order class.</p>
     <p><strong>Inheritance-Based Polymorphism:</strong> Polymorphism in the case where the method is defined in a base class and behaves differently for each child class.</p>
     <p><strong>Interface-Based Polymorphism:</strong>Polymorphism in the case where the method is defined in an interface and behaves differently in each class that implements the interface.</p>
-    <h1 style="color:grey;">Class Relationships</h1>
+    <h2 style="color:grey;">Class Relationships</h2>
 
     <p><strong>Collaboration:</strong> “Uses a” relationship. Objects can collaborate with other objects. For example: Customer Repository “uses a” Customer object to populate on a retrieve and serialize on a save.</p>
-    <p><strong></strong></p>
-
+    <p><strong>Composition:</strong> “Has a” relationship. Objects can be composed of other objects. For example, Order “has a” Customer and Order “has a” shipping address.</p>
+    <p><strong>Inheritance:</strong> “Is a” relationship. Objects can be subtyped. For example, a Business Type Customer “is a” Customer and a Residential Type Customer “is a” Customer.</p>
+    <h2>C# OOP Terms</h2>
+    <p><strong>Auto-implemented properties: </strong>Properties that create and manage the encapsulated backing field automatically. </p>
+    <p><strong>Static method:</strong>Adding the static modifier on a member of the class (property or method) defines that the member belongs to the class itself, not an instance of the class.</p>
+    <p><strong>Sealed class:</strong>Class that cannot be used as a base class for an inheritance relationship.</p>
+    <p><strong>Abstract class: </strong>Class that cannot be instantiated, so no objects can be created from the class. Nor can it be accessed by its class name. The class can only be used as a base class for other classes.</p>
+    <p><strong>Concrete class:</strong>Class that can be instantiated. Basically, the opposite of an abstract class.</p>
+    <p><strong>Static class:</strong>Class that cannot be instantiated, so no objects can be created from the class. The class members are instead accessed using the class name. A static class provides a shortcut to the members of the class when instancing is unwarranted. For example, the .NET Framework <i>Console</i> class is a static class. To call the <i>WriteLine</i> method you use <i>Console.WriteLine.</i> You don’t have to create a new instance of Console.</p>
+    <p><strong>Abstract method:</strong>: Method with no implementation (basically no code). The method must be overridden by a child class.</p>
+    <p><strong>Virtual method: </strong> Method with an implementation that can be overridden by a child class.</p>
 
 {% endblock %}
 </article>
