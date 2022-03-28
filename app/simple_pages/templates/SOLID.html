@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<article>{% block content %}
+    <h1>SOLID</h1>
+    <h2><strong>S.O.L.I.D Principles explained in Python with examples.</strong></h2>
+    <p>SOLID is a mnemonic abbreviation for a set of design principles created for software development in object-oriented languages. The principles in <strong>SOLID</strong> are intended to foster simpler, more robust and updatable code from software developers. Each letter in SOLID corresponds to a principle for development:</p>
+    <p>When implemented properly it makes your code more <strong>extendable, logical and easier to read.</strong></p>
+    <p>To understand <strong>SOLID</strong> principles, you have to know the use of the interface clearly.</p>
+    <p>I’m going to try to explain <strong>SOLID</strong> Principles in Python in simple way so that it’s easy for beginners to understand. It would be very easy to just take the examples provided and apply them to Python.</p>
+    <p>Let’s go through each principle one by one:</p>
+    <h2><strong>1. Single Responsibility Principle</strong></h2>
+    <p>The Single Responsibility Principle requires that a class should have only one job. So if a class has more than one responsibility, it becomes coupled. A change to one responsibility results to modification of the other responsibility.</p>
+    <img src="../../static/images/SOLIIDs.png" alt="Codes" width="350" height="450">
+    <p>We have a User class which is responsible for both the user properties and user database management. If the application changes in a way that it affect database management functions. The classes that make use of User properties will have to be touched and recompiled to compensate for the new changes. It’s like a domino effect, touch one card it affects all other cards in line.</p>
+    <p>So we simply split the class, we create another class that will handle the one responsibility of storing an user to a database:</p>
+    <img src="../../static/images/SOLIDs2.png" alt="Codes2" width="350" height="450">
+    <p>A common solution to this dilemma is to apply the Façade pattern. User class will be the Facade for user database management and user properties management.</p>
+    <p></p>
+
+
+{% endblock %}
+</article>

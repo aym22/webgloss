@@ -39,3 +39,10 @@ def OOPs():
         return render_template('OOPs.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/SOLID')
+def SOLID():
+    try:
+        return render_template('SOLID.html')
+    except TemplateNotFound:
+        abort(404)
