@@ -39,8 +39,12 @@
                             {{ render_nav_item('simple_pages.index', 'Home') }}
                         {% endif %}
 
-                        {{ render_nav_item('simple_pages.about','About') }}
                         {{ render_nav_item('simple_pages.welcome','Welcome') }}
+                        {{ render_nav_item('simple_pages.pylint','Pylint') }}
+                        {{ render_nav_item('simple_pages.AAA_Testing','AAA_Testing') }}
+                        {{ render_nav_item('simple_pages.OOPs','OOPs') }}
+                        {{ render_nav_item('simple_pages.SOLID','SOLID') }}
+                        {{ render_nav_item('simple_pages.about','About') }}
                     </div>
                 </div>
                 <div class="navbar-nav d-flex">
@@ -80,7 +84,7 @@
     {{ bootstrap.load_js() }}
 {% endblock %}
 <footer class="text-center mt-5">
-    Environment: {{ deployment_environment }} - Copyright: {{ year }} {{ format_price(100) }}
+    Environment: {{ deployment_environment }} - Copyright: {{ year }} {{ format_price(100)  }}
 </footer>
 </body>
 </html>
