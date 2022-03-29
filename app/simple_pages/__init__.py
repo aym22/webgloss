@@ -19,10 +19,10 @@ def welcome():
     except TemplateNotFound:
         abort(404)
 
-@simple_pages.route('/AAA_Testing')
-def AAA_Testing():
+@simple_pages.route('/PyLint')
+def PyLint():
     try:
-        return render_template('AAA_Testing.html')
+        return render_template('PyLint.html')
     except TemplateNotFound:
         abort(404)
 
