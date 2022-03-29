@@ -1,5 +1,109 @@
 {% extends "base.html" %}
 <article>{% block content %}
     <h1>About</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zippy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap" />
+    </noscript>
+    <link href="bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <noscript>
+        <style>
+            .tf-header {
+                background: url'../../static/images/PyCharm.png' no-repeat center center;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body id="top">
+    <header class="tf-header" data-parallax="scroll" data-image-src="images_1-hero-image.jpg">
+
+
+                    <h2 class="h3">Learn ABout PyCharm, Docker, and Github</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 pt-2">
+                            <div class="card"><img class="img-fluid card-img-top" src="../../static/images/PyCharm.png"
+                                    alt="2-start-simple" />
+                                <div class="card-body">
+                                    <p class="text-muted">PyCharm is a dedicated Python Integrated Development Environment (IDE) providing a wide range of essential tools for Python developers, tightly integrated to create a convenient environment for productive Python, web, and data science development.</p><a class="card-link"
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 pt-2">
+                            <div class="card"><img class="img-fluid card-img-top" src="../../static/images/Docker-Symbol.png"
+                                    alt="3-start-simple" />
+                                <div class="card-body">
+                                    <p class="text-muted">Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.</p><a class="card-link"
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 pt-2">
+                            <div class="card"><img class="img-fluid card-img-top" src="../../static/images/github.png"
+                                    alt="4-start-simple" />
+                                <div class="card-body">
+                                    <p class="text-muted">GitHub is an online software development platform used for storing, tracking, and collaborating on software projects. It enables developers to upload their own code files and to collaborate with fellow developers on open-source projects. GitHub also serves as a social networking site in which developers can openly network, collaborate, and pitch their work.</p><a class="card-link"
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tf-quotes-section">
+                <div class="carousel slide mt-5" id="tf-carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li class="active" data-target="#tf-carousel" data-slide-to="0"></li>
+                        <li data-target="#tf-carousel" data-slide-to="1"></li>
+                        <li data-target="#tf-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"
+                            style="background-image: url('images_5-start-simple-slider.jpg');">
+                            <div class="carousel-caption">
+                                <p class="slider-text-1">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod eligendi Error ad ducimus esse iusto rem? Iure!<br>Lorem ipsum dolor sit"</p>
+                                <p class="slider-text-2">Abcd Efgh<br>CEO, Founder of Zippy</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="background-image: url('images_6-start-simple-slider.jpg');">
+                            <div class="carousel-caption">
+                                <p class="slider-text-1">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod eligendi Error ad ducimus esse iusto rem? Iure!<br>Lorem ipsum dolor sit"</p>
+                                <p class="slider-text-2">Ijkl Mnop<br>Managing Director, Zippy</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="background-image: url('images_7-start-simple-slider.jpg');">
+                            <div class="carousel-caption">
+                                <p class="slider-text-1">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod eligendi Error ad ducimus esse iusto rem? Iure!<br>Lorem ipsum dolor sit"</p>
+                                <p class="slider-text-2">Qrst Uvwx<br>Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div><a class="carousel-control-prev" href="#tf-carousel" role="button" data-slide="prev"><span
+                            class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                            class="sr-only">Previous</span></a><a class="carousel-control-next" href="#tf-carousel"
+                        role="button" data-slide="next"><span class="carousel-control-next-icon"
+                            aria-hidden="true"></span><span class="sr-only">Next</span></a>
+                </div>
+            </div>
+
+    <script src="jquery.slim.min.js?ver=1.2.0"></script>
+    <script src="bootstrap.bundle.min.js?ver=1.2.0"></script>
+    <script src="parallax.min.js?ver=1.2.0"></script>
+    <script src="main.js?ver=1.2.0"></script>
+    <script type="text/javascript">
 {% endblock %}
 </article>
