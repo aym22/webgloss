@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 <article>{% block content %}
     <h1>Pylint</h1>
-    <h2><strong>PYLINT:</strong></h2>
+    <h2><strong>Introduction to Pylint</strong></h2>
+    <p>Pylint is defined as Python Static code analysis tool for analysis purpose. It can scan for programming errors, implement best practises in coding standards, identify code violations and provide refactoring suggestions.</p>
+    <p>It is fully user customizable and has integral special functions to control individual errors and alerts within the user’s code. It gives user flexibility to write their own custom plugin and executable from an extensive configuration file.</p>
+    <p>Pylint will display number of messages as it does code analysis and code are given an overall mark based on number and severity of warnings and errors.</p>
+    <p>Pylint is a tool that checks for errors in Python code, tries to enforce a coding standard and looks for code smells. It can also look for certain type errors, it can recommend suggestions about how particular blocks can be refactored and can offer you details about the code's complexity.</p>
+    <p> It is similar to Pychecker and Pyflakes, but includes the following features:</p>
+    <ul>
+        <li>Checking the length of each line</li>
+        <li>Checking that variable names are well-formed according to the project's coding standard</li>
+        <li>Checking that declared interfaces are truly implemented</li>
+    </ul>
+    <h2><strong>Specifications and Features of Pylint</strong></h2>
+    <p>Pylint tool has classy as features described below:</p>
+    <p style="color:blue;">Features: Description</p>
+    <p><strong>Coding standard</strong>It is a preferred tool having special abilities to check length of code, provides the ability to check code as per coding standards such as well-formed variable names. This also checks if user is using imported modules.</p>
+    <p><strong>Error detection</strong>	It has internal mechanism for error detections. It can check if declared interfaces are implemented with right syntax and if any imported modules being used.</p>
+    <p><strong>Refactoring</strong>	It can detect duplicate code like other tools. This process comprises of code refactoring, restructuring of existing code without changing its external behaviour or functionality , refactoring improves the design, structure, and implementation of software.</p>
+    <p><strong>Fully customizable</strong>	User has option to modify ‘pylintrc’ to customize conventions and errors to set personal priorities and preferences. It has great advantage  to customize, configure with the ability to write custom plugins for specialized implementations.</p>
+    <p><strong>Integration of editor</strong>It is compatible with many code editors available in the market.     Some supported editions are emacs , vim (pylint.vlm, syntastic), eclipse, etc.</p>
+    <p><strong>Integration with IDE</strong>It can support various IDEs such as Spyder, Editra, TextMate, Eclipse with PyDev, etc.</p>
+    <p><strong>UMI diagrams</strong>It has extra code content called “Pyreverse’ which can create UML diagrams for Python code . Bundled with Pylint.</p>
+    <p><strong>Continuous integration</strong>Allows user to run it in his project code and this process can be automated using Apycot, Hudson or Jenkins.</p>
 {% endblock %}
 </article>
