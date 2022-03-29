@@ -18,6 +18,13 @@ def welcome():
     except TemplateNotFound:
         abort(404)
 
+@simple_pages.route('/pylint')
+def pylint():
+    try:
+        return render_template('pylint.html')
+    except TemplateNotFound:
+        abort(404)
+
 @simple_pages.route('/AAA_Testing')
 def AAA_Testing():
     try:
