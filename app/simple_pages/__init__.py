@@ -19,13 +19,6 @@ def welcome():
     except TemplateNotFound:
         abort(404)
 
-@simple_pages.route('/PyLint')
-def PyLint():
-    try:
-        return render_template('PyLint.html')
-    except TemplateNotFound:
-        abort(404)
-
 @simple_pages.route('/OOPs')
 def OOPs():
     try:
